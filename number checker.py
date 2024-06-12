@@ -12,4 +12,4 @@ def num_check(question, error, num_type):
             print(error)
 
 
-random_number = num_check("pick a random number: ", "thats not a number", float)
+random_number = num_check("pick a random number: ", "thats not a valid number", float)

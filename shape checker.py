@@ -1,3 +1,4 @@
+
 def shape(question, shape_list):
     error = "Please choose one of the following shapes: cube, cuboid, sphere, cylinder or square based pyramid"
 
@@ -10,9 +11,9 @@ def shape(question, shape_list):
                 return item
 
         print(error)
-        print()
 
 
 shape_list = ["cube", "cuboid", "sphere", "cylinder", "square based pyramid"]
 
-random_shape = shape("pick a shape: ", shape_list)
+while True:
+    random_shape = shape("pick a shape: ", shape_list)
