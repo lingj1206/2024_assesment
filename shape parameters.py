@@ -53,11 +53,12 @@ def sphere(radius):
     return f"volume is: {volume}, Surface area is: {surface_area}"
 
 
-# def sq_pyramid(length, height):
-#     volume =
-#     surface_area =
-#     return f"volume is: {volume}, Surface area is: {surface_area}"
-
+def sq_pyramid(length, height):
+    volume = length ** 2 * height / 3
+    base_area = length ** 2
+    triangle_area = 0.5 * length * height
+    surface_area = base_area + (4 * triangle_area)
+    return f"volume is: {volume}, Surface area is: {surface_area}"
 
 
 shape_list = ["cube", "cuboid", "sphere", "cylinder", "square pyramid", "xxx"]
@@ -77,5 +78,19 @@ while True:
         width = num_check("what is the width: ", "please enter a positive integer", float)
         height = num_check("what is the height: ", "please enter a positive integer", float)
         result = cuboid(length, width, height)
+
+    elif random_shape == "cylinder":
+        radius = num_check("what is the radius: ", "please enter a positive integer", float)
+        height = num_check("what is the height: ", "please enter a positive integer", float)
+        result = cylinder(radius, height)
+
+    elif random_shape == "sphere":
+        radius = num_check("what is the radius: ", "please enter a positive integer", float)
+        result = sphere(radius)
+
+    else:
+        length = num_check("what is the length: ", "please enter a positive integer", float)
+        height = num_check("what is the height: ", "please enter a positive integer", float)
+        result = sq_pyramid(length, height)
 
     print(result)
