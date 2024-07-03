@@ -1,3 +1,6 @@
+import math
+
+
 def num_check(question, error, num_type):
     while True:
         try:
@@ -12,12 +15,13 @@ def num_check(question, error, num_type):
             print(error)
 
 
-def cylinder(radius, height):
-    volume = 3.14159 * radius ** 2 * height
-    surface_area = 2 * 3.14159 * radius * height + 2 * 3.14159 * radius * radius
+def sq_pyramid(length, height):
+    volume = length ** 2 * height / 3
+    surface_area = length ** 2 + 2 * length * \
+                   math.sqrt((length ** 2 / 4) + height ** 2)
     return f"volume is: {volume}, Surface area is: {surface_area}"
 
 
-radius = num_check("what is the radius: ", "please enter a positive integer", float)
+length = num_check("what is the length: ", "please enter a positive integer", float)
 height = num_check("what is the height: ", "please enter a positive integer", float)
-print(cylinder(radius, height))
+print(sq_pyramid(length, height))

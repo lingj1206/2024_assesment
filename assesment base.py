@@ -17,6 +17,11 @@ def yes_no(question, yes_no_list):
         print()
 
 
+def instructions():
+    print()
+    print("instructions go here")
+
+
 # number checker
 def num_check(question, error, num_type):
     while True:

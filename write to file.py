@@ -65,11 +65,11 @@ def sq_pyramid(length, height):
 
 
 # list of valid shapes
-shape_list = ["cube", "cuboid", "sphere", "cylinder", "square pyramid", "xxx"]
+valid_shape_list = ["cube", "cuboid", "sphere", "cylinder", "square pyramid", "xxx"]
 
 # loop
 while True:
-    random_shape = shape("pick a shape: ", shape_list)
+    random_shape = shape("pick a shape: ", valid_shape_list)
 
     if random_shape == "xxx":
         break

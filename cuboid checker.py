@@ -22,4 +22,4 @@ while True:
     length = num_check("what is the length: ", "please enter a positive integer", float)
     width = num_check("what is the width: ", "please enter a positive integer", float)
     height = num_check("what is the height: ", "please enter a positive integer", float)
-    print(length, width, height)
+    print(cuboid(length, width, height))
